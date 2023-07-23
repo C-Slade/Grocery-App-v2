@@ -1,0 +1,24 @@
+.error {
+  border: 2px solid red;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  padding: 0;
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 30px;
+  width: 70%;
+  background-image: linear-gradient(rgba(255, 0, 0, 0.4705882353), rgba(195, 0, 0, 0.4862745098));
+  color: white;
+}
+.error svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  cursor: pointer;
+}/*# sourceMappingURL=error.css.map */

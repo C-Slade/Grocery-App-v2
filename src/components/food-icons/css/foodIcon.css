@@ -1,0 +1,116 @@
+@keyframes GFG {
+  0% {
+    transform: rotate(0deg) translateY(5px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) translateY(5px) rotate(-90deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(180deg) translateY(5px) rotate(-180deg) scale(1.1);
+  }
+  75% {
+    transform: rotate(270deg) translateY(5px) rotate(-270deg) scale(1.05);
+  }
+  100% {
+    transform: rotate(360deg) translateY(5px) rotate(-360deg) scale(1);
+  }
+}
+.foodIcon-container {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  z-index: 1;
+  transition: ease-in-out 2s;
+  animation: GFG 2s linear infinite;
+  cursor: pointer;
+}
+.foodIcon-container:nth-child(1) {
+  top: 5%;
+  left: 10%;
+}
+.foodIcon-container:nth-child(2) {
+  top: 25%;
+  left: 8%;
+}
+.foodIcon-container:nth-child(3) {
+  top: 20%;
+  left: 22%;
+}
+.foodIcon-container:nth-child(4) {
+  top: 40%;
+  left: 30%;
+}
+.foodIcon-container:nth-child(5) {
+  top: 50%;
+  left: 5%;
+}
+.foodIcon-container:nth-child(6) {
+  top: 70%;
+  left: 25%;
+}
+.foodIcon-container:nth-child(7) {
+  top: 10%;
+  left: 65%;
+}
+.foodIcon-container:nth-child(8) {
+  top: 5%;
+  left: 25%;
+}
+.foodIcon-container:nth-child(9) {
+  top: 80%;
+  left: 5%;
+}
+.foodIcon-container:nth-child(10) {
+  top: 40%;
+  left: 85%;
+}
+.foodIcon-container:nth-child(11) {
+  top: 60%;
+  left: 65%;
+}
+.foodIcon-container:nth-child(12) {
+  top: 75%;
+  left: 80%;
+}
+.foodIcon-container:nth-child(13) {
+  top: 35%;
+  left: 70%;
+}
+.foodIcon-container:nth-child(14) {
+  top: 90%;
+  left: 50%;
+}
+.foodIcon-container:nth-child(15) {
+  top: 15%;
+  left: 80%;
+}
+.foodIcon-container:nth-child(16) {
+  top: 15%;
+  left: 90%;
+}
+.foodIcon-container:nth-child(17) {
+  top: 90%;
+  left: 20%;
+}
+.foodIcon-container:nth-child(18) {
+  top: 50%;
+  left: 20%;
+}
+.foodIcon-container:nth-child(19) {
+  top: 65%;
+  left: 90%;
+}
+.foodIcon-container:nth-child(20) {
+  top: 2%;
+  left: 50%;
+}
+.foodIcon-container img {
+  width: 75px;
+  height: 75px;
+}
+
+@media screen and (max-width: 1175px) {
+  .foodIcon-container {
+    display: none;
+  }
+}/*# sourceMappingURL=foodIcon.css.map */

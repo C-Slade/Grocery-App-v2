@@ -1,0 +1,68 @@
+@import "../../../main-css/variables.sass"
+    
+@keyframes bobble
+    0%
+        transform: scale(0.75)
+    25%
+        transform: scale(0.78)
+    50%
+        transform: scale(0.80)
+    75%
+        transform: scale(0.78)
+    100%
+        transform: scale(0.75)
+        
+    
+    
+.home-links-container
+    display: flex
+    width: 100vw
+    height: 30vh
+    justify-content: center
+    top: 30% !important
+    left: 0
+    touch-action: none
+    // position: absolute
+
+    .animated-link-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        color: white
+        text-decoration: none
+        border: 2px solid white
+        background-color: #00000052
+        border-radius: 30px
+        width: 255px
+        margin: 0 75px
+        justify-content: center
+        z-index: 10
+
+        a
+            text-decoration: none
+            transition: ease-in-out 2s
+            animation: bobble 2s linear infinite
+
+            img 
+                width: 185px
+                height: 185px
+            h1
+                color: white
+
+
+@media screen and (max-width: $main-breakpoint)
+    .home-links-container
+        flex-direction: column
+        height: 75vh
+        top: 15% !important
+
+        .animated-link-container
+            top: 0
+            bottom: 0
+            right: 0
+            left: 0
+            margin: auto
+        
+
+            

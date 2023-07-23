@@ -1,0 +1,24 @@
+.successModal {
+  border: 2px solid green;
+  background-image: linear-gradient(rgba(51, 255, 0, 0.4705882353), rgba(108, 252, 83, 0.4862745098));
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 70%;
+  height: 30px;
+  bottom: 100px;
+}
+.successModal a {
+  margin: 0 0 0 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.successModal svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  cursor: pointer;
+  fill: green;
+}/*# sourceMappingURL=success.css.map */

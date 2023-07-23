@@ -1,0 +1,127 @@
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 6;
+  width: 0;
+  touch-action: none;
+}
+nav .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 75px;
+  background: #fff;
+  touch-action: none;
+}
+nav button {
+  outline: none;
+  border: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  z-index: 10;
+  transform: translate3d(0, 0, 0);
+}
+nav ul {
+  padding: 25px;
+  position: absolute;
+  top: 100px;
+  margin: 0 20px;
+  padding: 0;
+  height: 50%;
+}
+nav li {
+  margin-bottom: 40px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+nav .icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 40px 0;
+  margin-right: 20px;
+}
+nav .text-placeholder {
+  border-radius: 5px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+nav .text-placeholder a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #7347f7;
+  font-size: 20px;
+  width: 100%;
+}
+nav .text-placeholder a:hover {
+  color: white;
+}
+nav .refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+nav .li-0:hover {
+  background: rgba(255, 26, 26, 0.4980392157);
+}
+nav .li-1:hover {
+  background: rgba(255, 137, 26, 0.4980392157);
+}
+nav .li-2:hover {
+  background: rgba(160, 255, 26, 0.4980392157);
+}
+nav .li-3:hover {
+  background: rgba(26, 244, 255, 0.4980392157);
+}
+nav .li-4:hover {
+  background: rgba(49, 26, 255, 0.4980392157);
+}
+nav .li-5:hover {
+  background: rgba(209, 26, 255, 0.4980392157);
+}
+
+@media screen and (max-width: 1175px) {
+  nav .background {
+    background: #7347f7;
+  }
+  nav ul {
+    margin: 0 2%;
+  }
+  nav ul a {
+    color: white;
+    font-size: 22px !important;
+    margin: 0 5px;
+  }
+  nav li {
+    margin: 50px 0;
+  }
+}/*# sourceMappingURL=menu.css.map */

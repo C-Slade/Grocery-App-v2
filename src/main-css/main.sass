@@ -1,0 +1,27 @@
+@import "../main-css/variables.sass"
+@import url('https://fonts.googleapis.com/css?family=Poppins')
+
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: 'poppins'
+.root
+    overflow: hidden
+
+body
+    width: 100vw
+    height: 100vh
+    background-color: $main-color
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    overflow: hidden
+    touch-action: none
+
+    @media screen and (max-width: $main-breakpoint)
+    body
+        background-color: $main-color
+

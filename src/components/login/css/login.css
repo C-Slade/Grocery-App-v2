@@ -1,1 +1,149 @@
-/*# sourceMappingURL=login.css.map */
+.card-container {
+  background-color: white;
+  display: flex;
+  width: 25vw;
+  height: 75vh;
+  flex-direction: column;
+  border-radius: 15px;
+  min-width: 400px;
+  padding: 50px 0;
+  text-align: center;
+  box-shadow: 0px 0px 40px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  justify-content: space-between;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.card-container .login-form .error {
+  top: 25%;
+}
+.card-container .forgotPass-form .input-container {
+  width: 95% !important;
+}
+.card-container .forgotPass-form .error {
+  top: 5%;
+}
+.card-container .animated-form {
+  height: 90%;
+}
+.card-container .animated-form h1 {
+  font-weight: 50;
+}
+.card-container .animated-form form {
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  min-height: 75%;
+  width: 100%;
+  position: relative;
+}
+.card-container .animated-form form .login {
+  width: 65%;
+  background-color: #7347f7;
+  border-radius: 20px;
+  height: 40px;
+  border: none;
+  color: white;
+  align-self: center;
+  font-size: 20px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+.card-container .animated-form form .login:hover {
+  transform: scale(1.05);
+}
+.card-container .animated-form form .input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+}
+.card-container .animated-form form .input-container input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.367);
+  font-size: 18px;
+  -webkit-border-radius: 0;
+}
+.card-container .animated-form form .input-container input:focus {
+  outline: none;
+}
+.card-container .animated-form form .input-container .forgot-pass-link {
+  font-size: 14px;
+  position: absolute;
+  right: -10px;
+  bottom: -25px;
+  color: #7347f7;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 4;
+}
+.card-container .animated-form .additonalLinks {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  z-index: 5;
+}
+.card-container .animated-form .additonalLinks p {
+  margin: 0 5px 0 0;
+}
+.card-container .animated-form .additonalLinks .link {
+  color: #7347f7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.forgotPass {
+  height: 75vh;
+}
+.forgotPass .animated-form {
+  padding: 20% 0;
+}
+.forgotPass .animated-form form .input-container input {
+  width: 75%;
+  align-self: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 1175px) {
+  .card-container {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 75px 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-container .animated-form {
+    width: 100%;
+    max-width: 550px;
+  }
+  .card-container .animated-form .additonalLinks {
+    margin: -60px 0 0 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .card-container .animated-form form .input-container {
+    width: 75%;
+    border: none;
+  }
+  .card-container .animated-form form .input-container input {
+    font-size: 24px;
+  }
+  .card-container .animated-form form .login {
+    margin: 25px 0 0 0;
+    height: 60px;
+  }
+}/*# sourceMappingURL=login.css.map */

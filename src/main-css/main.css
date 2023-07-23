@@ -1,1 +1,26 @@
-/*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins";
+}
+
+.root {
+  overflow: hidden;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #7347f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  touch-action: none;
+}
+body body {
+  background-color: #7347f7;
+}/*# sourceMappingURL=main.css.map */
