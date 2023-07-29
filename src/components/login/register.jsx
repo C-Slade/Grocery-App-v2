@@ -23,6 +23,8 @@ const Register = ({ scrollIntoView }) => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setError(false);
+    successModal(false);
     scrollIntoView();
 
     if (passwordRef.current.value !== confirmPasswordRef.current.value) {
@@ -90,8 +92,6 @@ const Register = ({ scrollIntoView }) => {
           transition={{
             type: "spring",
             ease: "linear",
-            duration: 2,
-            x: { duration: 1 },
           }}
         >
           {isRegistering ? (

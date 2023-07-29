@@ -21,7 +21,7 @@ const Error = ({ errMsg, setErr }) => {
       }}
     >
       <p>{parseMsg()}</p>
-      <IoMdClose onClick={() => setErr(false)} />
+      <IoMdClose onClick={() => (setErr ? setErr(false) : null)} />
     </motion.div>
   );
 };

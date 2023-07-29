@@ -17,28 +17,25 @@ const Home = () => {
         className="home-links-container"
         initial={{
           opacity: 0,
-          x: -window.innerWidth,
+          y: -window.innerHeight,
           position: "absolute",
         }}
-        animate={{ opacity: 1, x: 0 }}
+        animate={{ opacity: 1, y: 0, zIndex: 5 }}
         exit={{
           opacity: 0,
-          x: window.innerWidth,
+          y: window.innerHeight,
           position: "absolute",
-          top: "30%",
         }}
         transition={{
           type: "spring",
           ease: "linear",
-          duration: 3,
-          x: { duration: 1 },
         }}
       >
         <motion.div className="animated-link-container" variants={varientItem}>
           <Link to="/grocery">
             <div className="home-img-container">
               <img src={groceryList} alt="" />
-              <h1>Grocery List</h1>
+              <h1>Groceries</h1>
             </div>
           </Link>
         </motion.div>

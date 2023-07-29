@@ -20,7 +20,6 @@ const variants = {
 
 export const MenuItems = ({ toggle, isOpen }) => {
   // removes the width from the ul when the menu is closed to prevent users not being able to press on inputs properly
-
   const styles = () => {
     if (isOpen && window.innerWidth < 1175) return { width: "90%" };
     else if (isOpen) return { width: "15.5vw" };
@@ -48,7 +47,6 @@ const links = [
   { Link: "/", name: "Home" },
   { Link: "/recipes", name: "Recipes" },
   { Link: "/grocery", name: "Groceries" },
-  { Link: "/account-settings", name: "Account Settings" },
   { Link: "/saved-recipes", name: "Saved Recipes" },
   { Link: "/login", name: "Sign Out" },
 ];

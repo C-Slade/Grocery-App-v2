@@ -17,7 +17,7 @@ const App = () => {
     } else {
       navigate("/");
     }
-  }, [currentUser, navigate]);
+  }, []);
 
   return (
     <>
@@ -25,7 +25,6 @@ const App = () => {
       {foodLinks.food.map((food, i) => (
         <FoodIcon foodLink={food} key={i} />
       ))}
-
       <AnimatedRoutes />
     </>
   );

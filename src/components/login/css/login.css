@@ -22,6 +22,10 @@
 .card-container .login-form .error {
   top: 25%;
 }
+.card-container .forgotPass-form .successModal {
+  bottom: 25px;
+  min-width: 85%;
+}
 .card-container .forgotPass-form .input-container {
   width: 95% !important;
 }
@@ -33,6 +37,7 @@
 }
 .card-container .animated-form h1 {
   font-weight: 50;
+  text-align: center;
 }
 .card-container .animated-form form {
   display: flex;
@@ -77,10 +82,10 @@
   outline: none;
 }
 .card-container .animated-form form .input-container .forgot-pass-link {
-  font-size: 14px;
+  font-size: 16px;
   position: absolute;
-  right: -10px;
-  bottom: -25px;
+  right: -5px;
+  bottom: -30px;
   color: #7347f7;
   font-weight: bold;
   text-decoration: none;
@@ -105,7 +110,7 @@
   height: 75vh;
 }
 .forgotPass .animated-form {
-  padding: 20% 0;
+  padding: 50px 0;
 }
 .forgotPass .animated-form form .input-container input {
   width: 75%;
@@ -119,7 +124,7 @@
     width: 100vw;
     border-radius: 0;
     box-shadow: none;
-    padding: 75px 0;
+    padding: 75px 0 175px 0;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -130,7 +135,6 @@
     max-width: 550px;
   }
   .card-container .animated-form .additonalLinks {
-    margin: -60px 0 0 0;
     position: absolute;
     left: 0;
     right: 0;

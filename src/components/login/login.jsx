@@ -1,4 +1,4 @@
-import { React, useState, useRef, useEffect } from "react";
+import { React, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import Loading from "../loadingIcon/loading";
 import { motion } from "framer-motion";
@@ -11,13 +11,13 @@ const Login = ({ scrollIntoView }) => {
   const [isLoggingIn, login] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
-  const { signInUser, currentUser } = useAuth();
+  const [isAnimatedFormOpen, toggleAnimatedForm] = useState(false);
+  const { signInUser } = useAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
 
-  async function handleSubmit(e) {
-    e.preventDefault();
+  async function handleSubmit() {
     scrollIntoView();
     login(true);
     try {
@@ -27,13 +27,18 @@ const Login = ({ scrollIntoView }) => {
       let data = JSON.stringify(error);
       let errorCode = JSON.parse(data).code;
 
+      toggleAnimatedForm(false);
       setError(true);
       setErrorMessage(errorCode);
       login(false);
     }
   }
 
-  // motion card container animation from left to right
+  const variants = {
+    open: { opacity: 1, transform: "scale(1)" },
+    closed: { opacity: 0, transform: "scale(0)" },
+  };
+
   return (
     <>
       <motion.div
@@ -48,18 +53,24 @@ const Login = ({ scrollIntoView }) => {
         transition={{
           type: "spring",
           ease: "linear",
-          duration: 2,
-          x: { duration: 1 },
         }}
       >
         {isLoggingIn ? (
           <Loading />
         ) : (
           <>
-            <div className="animated-form">
+            <motion.div
+              className="animated-form"
+              animate={!isAnimatedFormOpen ? "open" : "closed"}
+              variants={variants}
+            >
               <h1>Login</h1>
               <form
-                onSubmit={handleSubmit}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  toggleAnimatedForm(true);
+                  setTimeout(() => handleSubmit(), 200);
+                }}
                 className="login-form"
                 onBlur={scrollIntoView}
               >
@@ -95,7 +106,7 @@ const Login = ({ scrollIntoView }) => {
                   Register now!
                 </Link>
               </div>
-            </div>
+            </motion.div>
           </>
         )}
       </motion.div>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import "./css/success.css";
 
-const Success = ({ successMsg, successModal }) => {
+const Success = ({ successMsg, successModal, signIn }) => {
   const parseMsg = successMsg
     .replace(/-/g, " ")
     .replace(/auth/g, " ")
@@ -21,7 +21,7 @@ const Success = ({ successMsg, successModal }) => {
       }}
     >
       <p>{parseMsg}</p>
-      <Link to="/login">Sign in</Link>
+      {signIn && signIn === "false" ? null : <Link to="/login">Sign in</Link>}
       <IoMdClose onClick={() => successModal(false)} />
     </motion.div>
   );

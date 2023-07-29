@@ -9,28 +9,39 @@ import { useAuth } from "../../context/authContext";
 
 const ForgotPass = ({ scrollIntoView }) => {
   const [submittingRecov, submitRecov] = useState(false);
+  const [isAnimatedFormOpen, toggleAnimatedForm] = useState(false);
   const [success, successModal] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState();
   const { sendPassReset } = useAuth();
   const emailRef = useRef();
 
-  async function handleSubmit(e) {
-    e.preventDefault();
-
+  async function handleSubmit() {
+    // remove any notifications before resubmitting
+    scrollIntoView();
+    successModal(false);
+    setError(false);
     try {
       submitRecov(true);
+      toggleAnimatedForm(true);
       await sendPassReset(emailRef.current.value);
+      toggleAnimatedForm(false);
       submitRecov(false);
       successModal(true);
     } catch (error) {
       let data = JSON.stringify(error);
       let errorCode = JSON.parse(data).code;
+      toggleAnimatedForm(false);
       submitRecov(false);
       setError(true);
       setErrorMessage(errorCode);
     }
   }
+
+  const variants = {
+    open: { opacity: 1, transform: "scale(1)" },
+    closed: { opacity: 0, transform: "scale(0)" },
+  };
 
   return (
     <>
@@ -42,8 +53,6 @@ const ForgotPass = ({ scrollIntoView }) => {
         transition={{
           type: "spring",
           ease: "linear",
-          duration: 2,
-          x: { duration: 1 },
         }}
       >
         <>
@@ -51,10 +60,18 @@ const ForgotPass = ({ scrollIntoView }) => {
             <Loading />
           ) : (
             <>
-              <div className="animated-form">
+              <motion.div
+                className="animated-form"
+                animate={!isAnimatedFormOpen ? "open" : "closed"}
+                variants={variants}
+              >
                 <h1>Forgot Password</h1>
                 <form
-                  onSubmit={(e) => handleSubmit(e)}
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    toggleAnimatedForm(true);
+                    setTimeout(() => handleSubmit(), 200);
+                  }}
                   className="forgotPass-form"
                 >
                   <div className="input-container">
@@ -72,6 +89,7 @@ const ForgotPass = ({ scrollIntoView }) => {
                     <Success
                       successMsg={"Reset link sent to your email"}
                       successModal={successModal}
+                      signIn="false"
                     />
                   ) : null}
                   <button className="login submit">Submit</button>
@@ -81,7 +99,7 @@ const ForgotPass = ({ scrollIntoView }) => {
                     Sign in
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </>
           )}
         </>

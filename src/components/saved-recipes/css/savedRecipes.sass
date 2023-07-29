@@ -1,0 +1,70 @@
+@import "../../../main-css/variables.sass"
+.saved-recipes-container
+    display: flex
+    justify-content: flex-start
+    align-items: center
+
+    h1 
+        color: $main-color
+
+    .saved-recipes-info-container
+        height: 50%
+        display: flex
+        justify-content: space-evenly
+        flex-direction: column
+        align-items: center
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        margin: auto
+
+        a
+            text-decoration: none
+            color: white
+            font-weight: 900
+            background: $main-color
+            padding: 5px
+            border-radius: 5px
+            cursor: pointer
+            transition: ease-in-out .2s
+            display: flex
+            justify-content: center
+            align-items: center
+
+            &:hover
+                transform: scale(1.1)
+
+        svg
+            font-size: 40px
+    .saved-recipes-link-container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 80%
+        border: 2px solid $main-color
+        margin: 10px 0
+        border-radius: 5px
+        padding: 0 5px
+
+        h2 
+            color: $main-color
+            font-size: 16px
+
+        a
+            text-decoration: none
+            color: $main-color
+            font-weight: bold
+            display: flex
+            justify-content: center
+            align-items: center
+
+            svg
+                font-size: 22px
+
+@media screen and (max-width: $main-breakpoint)
+    .saved-recipes-info-container
+        padding: 10px
+        a
+            padding: 15px !important
